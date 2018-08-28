@@ -14,5 +14,5 @@ require 'faker'
         author: Faker::Book.author,
         description: Faker::DumbAndDumber.quote,
         url: Faker::Internet.url
-    )
+    
 end
