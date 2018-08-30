@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'books/index'
   
-  resources :books
+  resources :books, :users
   
   root 'books#index'
 end

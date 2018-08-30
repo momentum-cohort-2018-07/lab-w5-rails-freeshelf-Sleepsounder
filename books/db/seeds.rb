@@ -7,12 +7,24 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 require 'faker'
+10.times do
+User.create(
+    username: Faker::Internet.username,
+    email: Faker::Internet.email,
+    password: Faker::Internet.password(8)
+  )
+
+end
 
 50.times do
     Book.create(
         title: Faker::Book.title,
         author: Faker::Book.author,
         description: Faker::DumbAndDumber.quote,
-        url: Faker::Internet.url
+        url: Faker::Internet.url,
+        user_id: 1 + rand(10)
     )
 end
+
+
+
